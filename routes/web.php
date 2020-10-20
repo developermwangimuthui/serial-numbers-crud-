@@ -16,6 +16,8 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+Auth::routes(['register' => false]);
+
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/confirm_sno', 'HomeController@confirm_sno')->name('confirm_sno');
