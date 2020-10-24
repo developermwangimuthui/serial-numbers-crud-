@@ -71,7 +71,8 @@
     	<div class="slider-overlay">
         	<div class="container">
             
-                <h1><span>Innovation and investment monitoring</span></h1>
+                <h1><span>Condor Oriental S. A. </span></h1>
+                <h2>Innovation and investment monitoring</h2>
           
                 <div class="data-status"></div> <!-- data submit status -->
                 
