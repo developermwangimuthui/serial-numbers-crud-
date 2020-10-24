@@ -6,7 +6,9 @@ use App\SerialNumber;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redirect;
-
+use Response;
+use Illuminate\Support\Facades\Hash;
+use App\User;
 class HomeController extends Controller
 {
     /**
@@ -29,13 +31,55 @@ class HomeController extends Controller
     {
         $result = SerialNumber::where('serial_number','=',Input::get('serialnumber'))->first();
         if ($result === null) {
-            return redirect()->back()->with(['error' => 'Serial Number does not exists']);
+            
+    return response()->json(['errors' => 'Serial Number does not exists']);
 
         }else{
-            return redirect()->back()->with(['success' => 'Serial Number exists']);
+            
+    return response()->json([
+
+        'success' => 'VERIFIED.',
+        'serial_number' =>$result->serial_number
+        ]);
+           
 
 
          }
       
+    }
+    public function AdminIndex()
+    {
+        $users = User::all();
+        return view('admin.index',compact('users'));
+    }
+    public function AdminStore(Request $request)
+    {
+        $user = new User();
+        $user->name = $request->input('name');
+        $user->email = $request->input('email');
+        $user->password = Hash::make($request->input('password'));
+        if ($user->save()) {
+            return redirect()->back();
+            // '->with(['success','User Added Succesfully']);
+        }else{
+            
+            return redirect()->back();
+            // ->with(['error','User not Added ']);
+        }
+    }
+    public function AdminUpdate(Request $request)
+    {
+        $user = User::findOrFail($request->category_id);
+        $user->update($request->all());
+        
+        return back();
+    }
+
+    public function AdminDestroy(Request $request )
+     {
+        $user = User::findOrFail($request->category_id);
+        $user->delete();
+
+        return back();
     }
 }

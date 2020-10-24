@@ -31,7 +31,7 @@ class SerialNumberController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
+    {   
         
         SerialNumber::create($request->all());
 

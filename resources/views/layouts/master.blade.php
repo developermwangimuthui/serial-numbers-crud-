@@ -69,6 +69,7 @@
       <ul class="sidebar-menu" data-widget="tree">
         
          <li class="active"><a href="{{url('serialnumber')}}"><i class="fa fa-microchip"></i> <span>Serial Numbers</span></a></li>
+         <li class="active"><a href="{{url('admin/index')}}"><i class="fa fa-microchip"></i> <span>Admin</span></a></li>
         <li class="">
 
            <a href="{{ route('logout') }}"
