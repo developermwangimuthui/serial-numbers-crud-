@@ -70,7 +70,12 @@ class HomeController extends Controller
     public function AdminUpdate(Request $request)
     {
         $user = User::findOrFail($request->category_id);
-        $user->update($request->all());
+        $user->update([
+            
+            'email'=>$request->input('email'),
+            'password'=> Hash::make($request->input('password')),
+            
+            ]);
         
         return back();
     }
