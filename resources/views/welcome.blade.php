@@ -67,8 +67,8 @@
                     <li><a href="#" class="smooth-scroll">Home</a></li>
                     <li><a href="#home" class="smooth-scroll">What we Do</a></li>
                     <li><a href="#about_us" class="smooth-scroll">About Us</a></li>
-                    <li><a href="#contact" class="smooth-scroll">Verify Number</a></li>
-                    <li><a href="#buynow" class="smooth-scroll">Contact</a></li>
+                    <li><a href="#verify" class="smooth-scroll">Verify Number</a></li>
+                    <li><a href="#contact" class="smooth-scroll">Contact</a></li>
                     <li><a href="#partners" class="smooth-scroll">Partners</a></li>
                 </ul>
             </div> <!-- End container -->
