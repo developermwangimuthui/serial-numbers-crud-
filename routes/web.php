@@ -36,6 +36,7 @@ Route::post('/admin/store', 'HomeController@AdminStore')->name('admin.store');
 Route::delete('/admin/destroy/', 'HomeController@AdminDestroy')->name('admin.destroy');
 Route::patch('/admin/update/', 'HomeController@AdminUpdate')->name('admin.update');
 Route::post('/confirm_sno', 'HomeController@confirm_sno')->name('confirm_sno');
+Route::post('/Sendemail', 'HomeController@Sendemail')->name('Sendemail');
 
 Route::resource('serialnumber','SerialNumberController');
 

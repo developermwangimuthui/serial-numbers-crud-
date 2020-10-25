@@ -21,9 +21,14 @@
 	-webkit-box-sizing:border-box; 
 	box-sizing:border-box; 
 }
-
+@font-face {
+    font-family: "Gugi";
+	src: url('/public/theme/font/Gugi-Regular.ttf')
+	format('truetype');
+}
 body {
-	font-family:Arial, Helvetica, sans-serif;
+	
+	font-family:"Gugi"; ;
 	color:#909090;
 	font-size:14px;
 	line-height:22px;
@@ -32,7 +37,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
 	color:#404040;
-	font-family:Raleway, Arial, sans-serif;
+	font-family:"Gugi";
 	font-weight:400;
 	margin-top:0px;
 }
@@ -88,7 +93,7 @@ a:hover {
 }
 
 label {
-	font-family:Roboto, Arial, sans-serif;
+	font-family:"Gugi";
 	color:#707070;
 	font-weight:300;
 }
@@ -108,7 +113,7 @@ blockquote p {
 
 /* Site Elements */
 .btn, input[type="button"], input[type="submit"], input[type="reset"] {
-	font-family:Raleway, Arial, sans-serif;
+	font-family:"Gugi";
 	color:#FFF !important;
 	font-size:13px;
 	line-height:55px;
@@ -146,7 +151,7 @@ input[type="button"], input[type="submit"], input[type="reset"], button.btn {
 
 input[type="text"], input[type="email"], input[type="password"], textarea {
 	height:55px;
-	font-family:Raleway, Arial, sans-serif;
+	font-family:"Gugi";
 	font-size:14px;
 	color:#4a4a4a;
 	padding:0px 20px;
@@ -166,7 +171,7 @@ input[type="text"]:disabled, input[type="email"]:disabled, input[type="password"
 }
 
 select {
-	font-family:Roboto, Arial, sans-serif;
+	font-family:"Gugi";
 	height:auto;
 	background-color:#FFF;
 	padding:10px 15px;
@@ -216,7 +221,7 @@ select:focus {
 }
 	.header h3 {
 		display:inline-block;
-		font-family:Roboto, Arial, sans-serif;
+		font-family:"Gugi";
 		font-size:30px;
 		line-height:36px;
 		font-weight:900;
@@ -225,7 +230,7 @@ select:focus {
 		margin:0px;
 	}
 	.header p {
-		font-family:Raleway, Arial, sans-serif;
+		font-family:"Gugi";
 		color:#9a9a9a;
 		font-size:18px;
 		line-height:24px;
@@ -279,7 +284,7 @@ select:focus {
 	
 #header .menu-nav {
 	overflow:hidden;
-	font-family:Raleway, Arial, sans-serif;
+	font-family:"Gugi";
 	font-size:13px;
 	line-height:18px;
 	text-transform:uppercase;
@@ -343,7 +348,7 @@ select:focus {
 	}
 	#slider h1 {
 		display:inline-block;
-		font-family:Roboto, Arial, sans-serif;
+		font-family:"Gugi";
 		color:#FFF;
 		font-size:48px;
 		line-height:54px;
@@ -459,7 +464,7 @@ select:focus {
 			border:0px;
 		}
 			#main-tabs .tabs > li > a {
-				font-family:Raleway, Arial, sans-serif;
+				font-family:"Gugi";
 				color:#a9a9a9;
 				font-size:13px;
 				text-transform:uppercase;
@@ -587,14 +592,14 @@ select:focus {
 	border-bottom:1px solid #eaeaea;
 }
 	#buynow h2 {
-		font-family:Roboto, Arial, sans-serif;
+		font-family:"Gugi";
 		font-size:48px;
 		line-height:54px;
 		margin:0px;
 	}
 		#buynow h2 strong { color:#44a3fc; }
 	#buynow p {
-		font-family:Raleway, Arial, sans-serif;
+		font-family:"Gugi";
 		font-size:20px;
 		line-height:26px;
 		margin:10px 0px 0px;
@@ -680,7 +685,7 @@ select:focus {
 			height:50px;
 			background-color:#303030;
 			color:#FFF;
-			font-family:Arial, Helvetica, sans-serif;
+			font-family:"Gugi";
 			font-size:15px;
 			font-weight:bold;
 			top:-25px;
@@ -727,7 +732,7 @@ select:focus {
 }
 .widget .dotstheme_portfolio:hover { border:5px solid #e5f2ff; }
 	.widget .dotstheme_portfolio h4 {
-		font-family:Roboto, Arial, sans-serif;
+		font-family:"Gugi";
 		font-size:14px;
 		line-height:18px;
 		text-transform:uppercase;
@@ -764,7 +769,7 @@ select:focus {
 	}
 	.widget .dotstheme_pricing:hover .tbl { border:1px solid #d2e9fe; }
 	.widget .dotstheme_pricing h3 {
-		font-family:Roboto, Arial, sans-serif;
+		font-family:"Gugi";
 		color:#44a3fc;
 		font-size:20px;
 		line-height:26px;
@@ -775,7 +780,7 @@ select:focus {
 	}
 	.widget .dotstheme_pricing .price {
 		color:#44a3fc;
-		font-family:Roboto, Arial, sans-serif;
+		font-family:"Gugi";
 		font-weight:700;
 		font-size:56px;
 		line-height:60px;
@@ -784,7 +789,7 @@ select:focus {
 	}
 		.widget .dotstheme_pricing .price sup { font-size:30px;	}
 		.widget .dotstheme_pricing .price span {
-			font-family:Raleway, Arial, sans-serif;
+			font-family:"Gugi";
 			display:block;
 			color:#909090;
 			font-size:14px;
@@ -841,7 +846,7 @@ select:focus {
 	}
 	.widget .dotstheme_testimonial .name {
 		display:inline-block;
-		font-family:Raleway, Arial, sans-serif;
+		font-family:"Gugi";
 		font-size:10px;
 		line-height:15px;
 		color:#FFF;
@@ -884,7 +889,7 @@ select:focus {
 		
 .footer-copyright {
 	background-color:#202020;
-	font-family:Roboto, Arial, sans-serif;
+	font-family:"Gugi";
 	text-align:center;
 	padding:25px 0px;
 	font-size:12px;
@@ -942,7 +947,7 @@ select:focus {
 			line-height:1em;
 			cursor:pointer;
 			padding:15px 0px;
-			font-family:Roboto, Arial, sans-serif;
+			font-family:"Gugi";
 			font-size:13px;
 		}
 		#customize .colors a {

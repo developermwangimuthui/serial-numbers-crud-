@@ -4,6 +4,9 @@
 
 
 	<div class="">
+		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+			Add Admin
+	   </button>
 		<div class="box">
 			<div class="box-header">
 				<h3 class="box-title">All Users</h3>
@@ -45,9 +48,7 @@
 
 
 	<!-- Button trigger modal -->
-{{-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
- 	Add Admin
-</button> --}}
+
 
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">

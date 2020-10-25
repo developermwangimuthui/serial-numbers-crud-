@@ -4,11 +4,12 @@ namespace App\Http\Controllers;
 
 use App\SerialNumber;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redirect;
 use Response;
 use Illuminate\Support\Facades\Hash;
 use App\User;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
 class HomeController extends Controller
 {
     /**
@@ -50,6 +51,53 @@ class HomeController extends Controller
          }
       
     }
+
+
+    public function Sendemail(Request $request) {
+        $data = [
+            'fname'=>$request->input('fname'),
+            'email'=>$request->input('email'),
+            'company'=>$request->input('company'),
+            'lname'=>$request->input('lname'),
+            'bphone'=>$request->input('bphone'),
+            'jtitle'=>$request->input('jtitle'),
+            'street1'=>$request->input('street1'),
+            'street2'=>$request->input('street2'),
+            'street3'=>$request->input('street3'),
+            'city'=>$request->input('city'),
+            'state'=>$request->input('state'),
+            'postal_code'=>$request->input('postal_code'),
+            'country'=>$request->input('country'),
+            'topic'=>$request->input('topic'),
+            'desc'=>$request->input('desc'),
+            'contact_method'=>$request->input('contact_method'),
+        ];
+      if ($this->send($data)) {
+        return response()->json([
+
+            'success' => 'Your Message has been sent Successfully.',
+    
+            ]);
+      }else{
+        return response()->json([
+
+            'error' => 'Message not Sent.',
+    
+            ]);
+      }
+                     
+     }
+     public function send($data)
+     {
+          Mail::send('mail.email', $data, function($message) use ($data) {
+           $message->to('info@condororiental.com')->subject
+              ($data['topic']);
+        $message->from($data['email'],$data['fname']."".$data['lname']);
+        });
+        return true;
+     }
+
+
     public function AdminIndex()
     {
         $users = User::all();
@@ -57,18 +105,15 @@ class HomeController extends Controller
     }
     public function AdminStore(Request $request)
     {
-        $user = new User();
-        $user->name = $request->input('name');
-        $user->email = $request->input('email');
-        $user->password = Hash::make($request->input('password'));
-        if ($user->save()) {
+        $data = [
+        'name'=>$request->input('name'),
+        'email'=>$request->input('email'),
+        'password'=>Hash::make($request->input('password'))
+        ];
+
+        DB::table('users')->insert($data);
             return redirect()->back();
-            // '->with(['success','User Added Succesfully']);
-        }else{
-            
-            return redirect()->back();
-            // ->with(['error','User not Added ']);
-        }
+     
     }
     public function AdminUpdate(Request $request)
     {

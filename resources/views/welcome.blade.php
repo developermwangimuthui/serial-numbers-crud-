@@ -216,19 +216,7 @@
 
             </div>
              <span id="form_result"></span>
-              {{-- <form  id="verify_form">
-                {{ csrf_field() }}
-                
-                <div class="card-body">
-                    <div class="form-group">
-                        <input type="text" id="serialnumber" name="serialnumber" class="form-control" placeholder="Enter Serial Number"
-                               required="required"/>
-                    </div>
-                    <button type="submit" class="btn btn-success">Confirm</button>
-                </div>
-                                      
-              </form> --}}
-              <form id="contact-form" method="post">
+                         <form id="sendEmail" method="post">
                 
                 {{ csrf_field() }}
             	<div class="row">
@@ -245,7 +233,7 @@
                         <label for="">Business Phone</label>
                         <input type="text" name="bphone" maxlength="80" placeholder="Business Phone">
                         <label for="fname">Job Title</label>
-                        <input type="text" name="name" maxlength="80" placeholder="Job Title">
+                        <input type="text" name="jtitle" maxlength="80" placeholder="Job Title">
 					</div>
                 </div> <!-- End row -->
                 <div class="row">
@@ -286,7 +274,7 @@
                 <input type="text" name="topic" maxlength="255" placeholder="Topic">
                 
                 <label for="fname">Description</label>
-                <textarea name="desc" id="" cols="30" rows="10"></textarea>
+                <textarea name="desc"  cols="30" rows="10"></textarea>
                     </div>
                 </div>
                 
@@ -294,22 +282,19 @@
 
                     <div class="col-md-6">
                         <label for="fname">Method of Contact</label>
-                        <select name="contact_method" id="" maxlength="255" class="form-control">
+                        <select name="contact_method" maxlength="255" class="form-control">
                             <option value="">Select Contact Method </option>
                             <option value="email">Email</option>
                         </select>
                         
                     </div>
                     <div class="col-md-6">
-<label for=""></label>
-                        <button type="submit" class="btn btn-primary" name="submit" value="Send a Message">Send Message</button>
+                    <label for=""></label>
+                        <button type="submit" class="btn btn-primary" name="submit" id="send_button">Send Message</button>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="span10 offset1">
-                    	<div class="data-status"></div> <!-- data submit status -->
-                    </div>
-				</div> <!-- End row -->
+             
+                <span id="email_result"></span>
 			</form>
         </div> <!-- End container -->
     </section> <!-- End contact -->
@@ -381,6 +366,40 @@
 					setTimeout(function () {
 						$('#form_result').html('');
 					}, 20000000);
+				}
+			});
+		});
+		$('#sendEmail').on('submit', function (event) {
+			event.preventDefault();
+
+            $('#send_button').text('Sending.......');
+			$.ajax({
+				url: "{{ route('Sendemail') }}",
+				method: "POST",
+				data: new FormData(this),
+				contentType: false,
+				cache: false,
+				processData: false,
+				dataType: "json",
+				success: function (data) {
+					console.log(data);
+					var html = '';
+					if (data.errors) {
+				
+						html = '<div class="alert alert-error"> <strong>' + data.errors + '</strong></div>';
+					}
+					if (data.success) {
+						html = '<div class="alert alert-success"><strong>' + data.success + '</div>';
+
+                            $('#send_button').text('Message Sent');
+					}
+
+					$('#email_result').html(html);
+					setTimeout(function () {
+                        
+                        $('#send_button').text('Send Message');
+						$('#email_result').html('');
+					}, 3000);
 				}
 			});
 		});
