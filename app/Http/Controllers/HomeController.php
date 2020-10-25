@@ -29,7 +29,8 @@ class HomeController extends Controller
     }
     public function confirm_sno(Request $request)
     {
-        $result = SerialNumber::where('serial_number','=',Input::get('serialnumber'))->first();
+        $serial_number = $request->input('serialnumber');
+        $result = SerialNumber::where('serial_number','=',$serial_number)->first();
         if ($result === null) {
             
     return response()->json(['errors' => 'Serial Number does not exists']);
@@ -39,7 +40,9 @@ class HomeController extends Controller
     return response()->json([
 
         'success' => 'VERIFIED.',
-        'serial_number' =>$result->serial_number
+        'serial_number' =>$result->serial_number,
+        'description' =>$result->description
+
         ]);
            
 

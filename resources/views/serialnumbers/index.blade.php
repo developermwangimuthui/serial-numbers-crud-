@@ -25,7 +25,7 @@
 						@foreach($serialnumbers as $cat)
 							<tr>
 								<td>{{$cat->serial_number}}</td>
-								<td>{{$cat->description}}</td>
+								<td>{!!$cat->description!!}</td>
 								<td>
 									<button class="btn btn-info" data-mytitle="{{$cat->serial_number}}" data-mydescription="{{$cat->description}}" data-catid={{$cat->id}} data-toggle="modal" data-target="#edit">Edit</button>
 									

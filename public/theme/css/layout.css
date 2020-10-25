@@ -510,6 +510,16 @@ select:focus {
 /* ========================= Contact ========================= */
 
 #contact {
+	
+	position:relative;
+	color:#FFF;
+	text-align:center;
+	background:#373f4d 50% 0 no-repeat fixed;
+	background-size:cover;
+	padding:80px 0px;
+	margin-top:40px;
+}
+#verify {
 	position:relative;
 	color:#FFF;
 	text-align:center;

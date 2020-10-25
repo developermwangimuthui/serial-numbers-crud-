@@ -16,7 +16,7 @@
     <!-- Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700,900' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
-    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <!-- Stylesheets -->
     <link rel="stylesheet" href="/theme/css/bootstrap.min.css">
     <link rel="stylesheet" href="/theme/css/bootstrap-responsive.min.css">
@@ -37,7 +37,15 @@
     
 </head>
 <body>
-
+<style>
+    label{
+        color:#ffffff;
+        font-size: 18px;
+    }
+    .contact{
+        letter-spacing: 5px;
+    }
+</style>
 	<header id="header">
     	<div class="header-wrap">
         	<div class="container">
@@ -143,31 +151,10 @@
 					</div>
 				</div>
 			</div> <!-- End row-fluid -->
-            
-        <section id="about_us">
-          <div class="header" id="features">
-            <h3>About Us </h3>
-              <div class="header-border"></div>
-    </div>
-          
-          <div class="row-fluid">
-            <div class="span12"> <!-- 1 -->
-                <div class="widget">
-                    <div class="dotstheme_feature" style="text-align: justify; color:black;">
-                          <p>A group of professional with over 200 years’ experience in various sectors, mastering of investments, taxation, trading, logistics, outsourcing, research and development, impex; TSM technical surveillance measures, face recognition, bugging devices, tracking security software development. TSCM technical surveillance COUNTER measures. </p>
-          </div>
-        </div>
-      </div>
-              
-      
-    </div> <!-- End row-fluid -->
-          
-			</section> 
                 
 		</div> <!-- End container -->
 	</div> <!-- End landing-wrap -->
-    
-    <section id="contact">
+    <section id="verify">
         
     	<div class="container">
             <h4><span>Verify Serial Number </h4>
@@ -187,18 +174,146 @@
               </form>
         </div> <!-- End container -->
     </section> <!-- End contact -->
-    <section id="buynow">
+    
+            
     	<div class="container">
-        <h2>  <strong> Contact Us </strong></h2>
-        <br>
-              <span>21 /F , FUTURA PLAZA, 111 HOW MING STREET</span> <br>
-              <span><i class="icon-map-marker"></i> &nbsp;&nbsp;&nbsp; KWUN TONG, KOWLOON, HONG KONG </span> <br>
-              <span ><i class="icon-envelope"></i>&nbsp;&nbsp;&nbsp; +852 58 03 66 48 </span><br>
-              <span><i class="icon-phone"></i>&nbsp;&nbsp;&nbsp; +852 58 03 66 48 </span>
-               <br>
-     
-		</div> <!-- End container -->
-	</section>
+        <section id="about_us">
+          <div class="header" id="features">
+            <h3>About Us </h3>
+              <div class="header-border"></div>
+            </div>
+          
+          <div class="row-fluid">
+            <div class="span12"> <!-- 1 -->
+                <div class="widget">
+                    <div class="dotstheme_feature" style="text-align: justify; color:black;">
+                          <p>A group of professional with over 200 years’ experience in various sectors, mastering of investments, taxation, trading, logistics, outsourcing, research and development, impex; TSM technical surveillance measures, face recognition, bugging devices, tracking security software development. TSCM technical surveillance COUNTER measures. </p>
+                    </div>
+                    </div>
+                </div>
+                        
+                
+                </div> <!-- End row-fluid -->
+          
+		</section> 
+    	</div>
+    <section id="contact">
+        
+    	<div class="container">
+            <h4><span>Contact US</h4>  
+                <br>
+                <div class="contact">
+
+                 <span>21 /F , FUTURA PLAZA, 111 HOW MING STREET</span> <br>
+                <span><i class="icon-map-marker"></i> &nbsp; KWUN TONG, KOWLOON, HONG KONG </span> <br>
+                <span ><i class="icon-envelope"></i>&nbsp; info@condororiental.com</span><br>
+                <span><i class="icon-phone"></i>&nbsp; +852 58 03 66 48 </span>
+                </div>
+         
+            <div class="header-border">
+
+             
+
+            </div>
+             <span id="form_result"></span>
+              {{-- <form  id="verify_form">
+                {{ csrf_field() }}
+                
+                <div class="card-body">
+                    <div class="form-group">
+                        <input type="text" id="serialnumber" name="serialnumber" class="form-control" placeholder="Enter Serial Number"
+                               required="required"/>
+                    </div>
+                    <button type="submit" class="btn btn-success">Confirm</button>
+                </div>
+                                      
+              </form> --}}
+              <form id="contact-form" method="post">
+                
+                {{ csrf_field() }}
+            	<div class="row">
+                	<div class="col-md-6"><label for="fname">First Name</label>
+                        <input type="text" name="fname" maxlength="80" placeholder="First Name">
+                        <label for="fname">Email</label>
+                        <input type="email" name="email" maxlength="255" placeholder="Email (required)">
+                        <label for="fname">Company Name</label>
+                        <input type="text" name="company" maxlength="255" placeholder="Company Name">
+					</div>
+                    <div class="col-md-6">
+                        <label for="fname">Last Name</label>
+                        <input type="text" name="lname" maxlength="80" placeholder="Last Name">
+                        <label for="">Business Phone</label>
+                        <input type="text" name="bphone" maxlength="80" placeholder="Business Phone">
+                        <label for="fname">Job Title</label>
+                        <input type="text" name="name" maxlength="80" placeholder="Job Title">
+					</div>
+                </div> <!-- End row -->
+                <div class="row">
+                    <div class="col-md-12">
+
+                <label for="fname">Street 1</label>
+                <input type="text" name="street1" maxlength="255" placeholder="Street 1">
+                
+                <label for="fname">Street 2</label>
+                <input type="text" name="street2" maxlength="255" placeholder="Street 2">
+                
+                <label for="fname">Street 3</label>
+                <input type="text" name="street3" maxlength="255" placeholder="Street 3">
+                    </div>
+            </div>
+            	<div class="row">
+                    <div class="col-md-6">
+                        
+                <label for="fname">City</label>
+                        <input type="text" name="city" maxlength="80" placeholder="City">
+                        
+                <label for="fname">Zip/Postal Code</label>
+                    	<input type="text" name="postal_code" maxlength="255" placeholder="Zip/Postal Code">
+					</div>
+                    <div class="col-md-6">
+                        
+                <label for="fname">State/Province</label>
+                        <input type="text" name="state" maxlength="80" placeholder="State/Province">
+                        
+                <label for="fname">Country/Region</label>
+                    	<input type="text" name="country" maxlength="255" placeholder="Country/Region">
+					</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+
+                <label for="fname">Topic</label>
+                <input type="text" name="topic" maxlength="255" placeholder="Topic">
+                
+                <label for="fname">Description</label>
+                <textarea name="desc" id="" cols="30" rows="10"></textarea>
+                    </div>
+                </div>
+                
+                <div class="row">
+
+                    <div class="col-md-6">
+                        <label for="fname">Method of Contact</label>
+                        <select name="contact_method" id="" maxlength="255" class="form-control">
+                            <option value="">Select Contact Method </option>
+                            <option value="email">Email</option>
+                        </select>
+                        
+                    </div>
+                    <div class="col-md-6">
+<label for=""></label>
+                        <button type="submit" class="btn btn-primary" name="submit" value="Send a Message">Send Message</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="span10 offset1">
+                    	<div class="data-status"></div> <!-- data submit status -->
+                    </div>
+				</div> <!-- End row -->
+			</form>
+        </div> <!-- End container -->
+    </section> <!-- End contact -->
+  
     
     <section class="footer-social" id="partners">
     	<div class="container">
@@ -256,10 +371,10 @@
 					var html = '';
 					if (data.errors) {
 				
-						html = '<div class="alert alert-error">' + data.errors + '</div>';
+						html = '<div class="alert alert-error"> <strong>' + data.errors + '</strong></div>';
 					}
 					if (data.success) {
-						html = '<div class="alert alert-success">' + data.success +' '+data.serial_number + '</div>';
+						html = '<div class="alert alert-success"><strong>' + data.success +' '+data.serial_number +' </strong><br>'+data.description + '</div>';
 
 					}
 					$('#form_result').html(html);

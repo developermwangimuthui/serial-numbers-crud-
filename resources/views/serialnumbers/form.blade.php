@@ -1,5 +1,5 @@
 	        	<div class="form-group">
-		        	<label for="title">Email</label>
+		        	<label for="title">Serial Number </label>
 		        	<input type="text" class="form-control" name="serial_number" id="title">
 	        	</div>
 
