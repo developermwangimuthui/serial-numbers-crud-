@@ -32,7 +32,7 @@ Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 
 
 
-Route::group(['middleware' => 'verified', 'auth'], function () {
+Route::group(['middleware' => 'auth'], function () {
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admin/index', 'HomeController@AdminIndex')->name('admin.index');
 Route::post('/admin/store', 'HomeController@AdminStore')->name('admin.store');
