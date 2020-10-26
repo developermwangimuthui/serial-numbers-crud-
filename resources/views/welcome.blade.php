@@ -187,7 +187,7 @@
             <div class="span12"> <!-- 1 -->
                 <div class="widget">
                     <div class="dotstheme_feature" style="text-align: justify; color:black;">
-                          <p>A group of professional with over 200 years’ experience in various sectors, mastering of investments, taxation, trading, logistics, outsourcing, research and development, impex; TSM technical surveillance measures, face recognition, bugging devices, tracking security software development. TSCM technical surveillance COUNTER measures. </p>
+                          <p>A group of professionals with over 200 years’ combined experience in various sectors, mastering of investments, taxation, trading, logistics, outsourcing, research and development, impex; TSM technical surveillance measures, face recognition, bugging devices, tracking security software development. TSCM technical surveillance COUNTER measures. </p>
                     </div>
                     </div>
                 </div>

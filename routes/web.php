@@ -30,6 +30,9 @@ Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail'
 Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
 Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 
+
+
+Route::group(['middleware' => 'verified', 'auth'], function () {
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admin/index', 'HomeController@AdminIndex')->name('admin.index');
 Route::post('/admin/store', 'HomeController@AdminStore')->name('admin.store');
@@ -53,5 +56,6 @@ View::composer(['*'], function($view){
 
     
 
+});
 });
 
