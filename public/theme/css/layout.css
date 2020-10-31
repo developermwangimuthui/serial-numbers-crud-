@@ -789,7 +789,7 @@ select:focus {
 	}
 		.widget .dotstheme_pricing .price sup { font-size:30px;	}
 		.widget .dotstheme_pricing .price span {
-			font-family:"Gugi";
+			font-family:Raleway, Arial, sans-serif;
 			display:block;
 			color:#909090;
 			font-size:14px;
@@ -846,7 +846,7 @@ select:focus {
 	}
 	.widget .dotstheme_testimonial .name {
 		display:inline-block;
-		font-family:"Gugi";
+		font-family:Raleway, Arial, sans-serif;
 		font-size:10px;
 		line-height:15px;
 		color:#FFF;

@@ -158,8 +158,11 @@
         
     	<div class="container">
             <h4><span>Verify Serial Number </h4>
-            <div class="header-border"></div>
+
+            <div class="header-border">
+                
              <span id="form_result"></span>
+            </div>
               <form  id="verify_form">
                 {{ csrf_field() }}
                 
@@ -213,75 +216,61 @@
             <div class="header-border">
 
              
+             <span id="form_result"></span>
 
             </div>
-             <span id="form_result"></span>
                          <form id="sendEmail" method="post">
                 
                 {{ csrf_field() }}
             	<div class="row">
-                	<div class="col-md-6"><label for="fname">First Name</label>
+                	<div class="col-md-6">
                         <input type="text" name="fname" maxlength="80" placeholder="First Name">
-                        <label for="fname">Email</label>
-                        <input type="email" name="email" maxlength="255" placeholder="Email (required)">
-                        <label for="fname">Company Name</label>
-                        <input type="text" name="company" maxlength="255" placeholder="Company Name">
+                                    <input type="email" name="email" maxlength="255" placeholder="Email (required)">
+                                           <input type="text" name="company" maxlength="255" placeholder="Company Name">
 					</div>
                     <div class="col-md-6">
-                        <label for="fname">Last Name</label>
-                        <input type="text" name="lname" maxlength="80" placeholder="Last Name">
-                        <label for="">Business Phone</label>
-                        <input type="text" name="bphone" maxlength="80" placeholder="Business Phone">
-                        <label for="fname">Job Title</label>
-                        <input type="text" name="jtitle" maxlength="80" placeholder="Job Title">
+                                        <input type="text" name="lname" maxlength="80" placeholder="Last Name">
+                                        <input type="text" name="bphone" maxlength="80" placeholder="Business Phone">
+                                        <input type="text" name="jtitle" maxlength="80" placeholder="Job Title">
 					</div>
                 </div> <!-- End row -->
                 <div class="row">
                     <div class="col-md-12">
 
-                <label for="fname">Street 1</label>
-                <input type="text" name="street1" maxlength="255" placeholder="Street 1">
+                       <input type="text" name="street1" maxlength="255" placeholder="Street 1">
                 
-                <label for="fname">Street 2</label>
-                <input type="text" name="street2" maxlength="255" placeholder="Street 2">
+                       <input type="text" name="street2" maxlength="255" placeholder="Street 2">
                 
-                <label for="fname">Street 3</label>
-                <input type="text" name="street3" maxlength="255" placeholder="Street 3">
+                       <input type="text" name="street3" maxlength="255" placeholder="Street 3">
                     </div>
             </div>
             	<div class="row">
                     <div class="col-md-6">
                         
-                <label for="fname">City</label>
-                        <input type="text" name="city" maxlength="80" placeholder="City">
+                           <input type="text" name="city" maxlength="80" placeholder="City">
                         
-                <label for="fname">Zip/Postal Code</label>
-                    	<input type="text" name="postal_code" maxlength="255" placeholder="Zip/Postal Code">
+                                  	<input type="text" name="postal_code" maxlength="255" placeholder="Zip/Postal Code">
 					</div>
                     <div class="col-md-6">
                         
-                <label for="fname">State/Province</label>
-                        <input type="text" name="state" maxlength="80" placeholder="State/Province">
+                                     <input type="text" name="state" maxlength="80" placeholder="State/Province">
                         
-                <label for="fname">Country/Region</label>
-                    	<input type="text" name="country" maxlength="255" placeholder="Country/Region">
+                                 	<input type="text" name="country" maxlength="255" placeholder="Country/Region">
 					</div>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
 
-                <label for="fname">Topic</label>
-                <input type="text" name="topic" maxlength="255" placeholder="Topic">
+                    <input type="text" name="topic" maxlength="255" placeholder="Topic">
                 
-                <label for="fname">Description</label>
-                <textarea name="desc"  cols="30" rows="10"></textarea>
+                          <textarea name="desc"  cols="30" rows="10"></textarea>
                     </div>
                 </div>
                 
                 <div class="row">
 
                     <div class="col-md-6">
-                        <label for="fname">Method of Contact</label>
+                       
                         <select name="contact_method" maxlength="255" class="form-control">
                             <option value="">Select Contact Method </option>
                             <option value="email">Email</option>
@@ -289,8 +278,7 @@
                         
                     </div>
                     <div class="col-md-6">
-                    <label for=""></label>
-                        <button type="submit" class="btn btn-primary" name="submit" id="send_button">Send Message</button>
+                      <button type="submit" class="btn btn-primary" name="submit" id="send_button">Send Message</button>
                     </div>
                 </div>
              
