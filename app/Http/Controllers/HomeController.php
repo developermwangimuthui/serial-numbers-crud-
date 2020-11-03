@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Hash;
 use App\User;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
+use Validator;
 class HomeController extends Controller
 {
     /**
@@ -54,6 +55,20 @@ class HomeController extends Controller
 
 
     public function Sendemail(Request $request) {
+
+
+        $rules = [
+            'email' => 'required',
+            'fname' => 'required',
+            'topic' => 'required',
+
+        ];
+
+        $error = Validator::make($request->all(), $rules);
+
+        if ($error->fails()) {
+            return Response::json(['errors' => $error->errors()->all()]);
+        }
         $data = [
             'fname'=>$request->input('fname'),
             'email'=>$request->input('email'),

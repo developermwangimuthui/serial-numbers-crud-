@@ -387,7 +387,7 @@
                         
                         $('#send_button').text('Send Message');
 						$('#email_result').html('');
-					}, 3000);
+					}, 6000);
 				}
 			});
 		});
