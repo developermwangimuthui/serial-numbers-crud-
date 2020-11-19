@@ -27,7 +27,7 @@ class AppServiceProvider extends ServiceProvider
         
            //savior for online server
       $this -> app-> bind('path.public', function(){
-          return base_path('/../public_html');
+          return base_path('/../../public_html');
           });
           //
     }
