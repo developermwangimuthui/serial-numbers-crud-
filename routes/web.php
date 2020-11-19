@@ -30,6 +30,7 @@ Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail'
 Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
 Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 
+Route::get('/our-gallery', 'HomeController@galleryFront')->name('gallery');
 Route::post('/Sendemail', 'HomeController@Sendemail')->name('Sendemail');
 
 Route::post('/confirm_sno', 'HomeController@confirm_sno')->name('confirm_sno');
@@ -40,6 +41,9 @@ Route::get('/admin/index', 'HomeController@AdminIndex')->name('admin.index');
 Route::post('/admin/store', 'HomeController@AdminStore')->name('admin.store');
 Route::delete('/admin/destroy/', 'HomeController@AdminDestroy')->name('admin.destroy');
 Route::patch('/admin/update/', 'HomeController@AdminUpdate')->name('admin.update');
+Route::get('/admin/gallery/', 'HomeController@gallery')->name('admin.gallery');
+Route::post('/admin/gallery/store', 'HomeController@galleryStore')->name('admin.gallery.store');
+Route::get('/admin/gallery/destroy/{id}', 'HomeController@galleryDestroy')->name('admin.gallery.destroy');
 
 Route::resource('serialnumber','SerialNumberController');
 

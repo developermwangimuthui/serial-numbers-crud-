@@ -70,6 +70,8 @@
                     <li><a href="#verify" class="smooth-scroll">Verify Number</a></li>
                     <li><a href="#contact" class="smooth-scroll">Contact</a></li>
                     <li><a href="#partners" class="smooth-scroll">Partners</a></li>
+                    {{-- <li><a href="#contact" class="smooth-scroll">Contact</a></li> --}}
+                    <li><a href="{{route('gallery')}}" class="smooth-scroll">Gallery</a></li>
                 </ul>
             </div> <!-- End container -->
         </nav> <!-- End menu-nav -->
