@@ -6,9 +6,7 @@
 	<!-- Your Basic Site Informations -->
 	<title>Condor Oriental</title>
 	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
-    <meta name="description" content="Cleaness is clean landing page that you can use for business template. This template built with very cool responsive design, bootstrap system, minimalize structure and a slew of features." />
-    <meta name="keywords" content="Landing Page, One Page, Business, Corporate, Premium, HTML5, CSS3, jQuery, Clean, Bootstrap, Responsive, Elegant" />
-    <meta name="author" content="Dots Theme" />
+    
     
     <!-- Mobile Specific Meta -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
