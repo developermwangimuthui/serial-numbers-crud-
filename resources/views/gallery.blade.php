@@ -77,20 +77,7 @@
     </div> <!-- End tab-content -->
 </section> <!-- End main-tabs -->
     
-  
-    
-    <section class="footer-social" id="partners">
-    	<div class="container">
-        
-        <h2><span>Partners </h2>
-        	<ul>
-            	<li><a href="http://dribbble.com/"><img src="/theme/images/logo1.jpg"></a></li>
-                <li><a href="http://facebook.com/dotstheme"><img src="/theme/images/logo2.jpg"></a></li>
-                <li><a href="http://plus.google.com/"><img src="/theme/images/logo3.jpg"></i></a></li>
-                <li><a href="http://plus.google.com/"><img src="/theme/images/logo3.jpg"></i></a></li>
-			</ul>
-		</div> <!-- End container -->
-	</section> <!-- End footer-social -->
+
     
     <footer class="footer-copyright">
     	<div class="container">
