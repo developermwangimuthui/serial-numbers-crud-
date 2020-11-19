@@ -263,7 +263,7 @@
 
                     <input type="text" name="topic" maxlength="255" placeholder="Topic">
                 
-                          <textarea name="desc"  cols="30" rows="10"></textarea>
+                          <textarea name="desc"  cols="30" rows="10" placeholder="Topic Description"></textarea>
                     </div>
                 </div>
                 
